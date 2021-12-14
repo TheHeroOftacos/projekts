@@ -15,7 +15,7 @@
 		/* Styling the Body element i.e. Color,
 		Font, Alignment */
 		body {
-			background-color: #05c46b;
+			background-color: #709ada;
 			font-family: Verdana;
 			text-align: center;
 		}
@@ -64,7 +64,7 @@
 
 		/* Styling Button */
 		button {
-			background-color: #05c46b;
+			background-color: #ffa601;
 			border: 1px solid #777;
 			border-radius: 2px;
 			font-family: inherit;
@@ -86,128 +86,85 @@
 		<!-- Details -->
 		<div class="form-control">
 			<label for="name" id="label-name">
-				Name
+				Vārds uzvārds
 			</label>
 
 			<!-- Input Type Text -->
 			<input type="text"
 				id="name"
-				placeholder="Enter your name" />
-		</div>
-
-		<div class="form-control">
-			<label for="email" id="label-email">
-				Email
-			</label>
-
-			<!-- Input Type Email-->
-			<input type="email"
-				id="email"
-				placeholder="Enter your email" />
-		</div>
-
-		<div class="form-control">
-			<label for="age" id="label-age">
-				Age
-			</label>
-
-			<!-- Input Type Text -->
-			<input type="text"
-				id="age"
-				placeholder="Enter your age" />
+				placeholder="Ievadi vārdu uzvārdu" />
 		</div>
 
 		<div class="form-control">
 			<label for="role" id="label-role">
-				Which option best describes you?
+				Klase
 			</label>
 			
 			<!-- Dropdown options -->
 			<select name="role" id="role">
-				<option value="student">Student</option>
-				<option value="intern">Intern</option>
-				<option value="professional">
-					Professional
+                <option value="izvelies">izvēlies klasi</option>
+				<option value="7a">7a</option>
+				<option value="7b">7b</option>
+				<option value="8a">
+					8a
 				</option>
-				<option value="other">Other</option>
+				<option value="8b">8b</option>
+                <option value="9a">9a</option>
+                <option value="9b">9b</option>
+                <option value="10vid">10.VID</option>
+                <option value="10sp">10.SP</option>
+                <option value="10vv">10.VV</option>
+                <option value="11id">11.ID</option>
+                <option value="11sp">11.SP</option>
+                <option value="11vv">11.VV</option>
+                <option value="12dz">12.DZ</option>
+                <option value="12ip">12.IP</option>
+                <option value="12ek">12.EK</option>
 			</select>
 		</div>
 
 		<div class="form-control">
 			<label>
-				Would you recommed GeeksforGeeks
-				to a friend?
+				Vai tu ēdīsi pusdienas šajā slav
 			</label>
 
 			<!-- Input Type Radio Button -->
 			<label for="recommed-1">
 				<input type="radio"
 					id="recommed-1"
-					name="recommed">Yes</input>
+					name="recommed">Jā</input>
 			</label>
 			<label for="recommed-2">
 				<input type="radio"
 					id="recommed-2"
-					name="recommed">No</input>
-			</label>
-			<label for="recommed-3">
-				<input type="radio"
-					id="recommed-3"
-					name="recommed">Maybe</input>
+					name="recommed">Nē</input>
 			</label>
 		</div>
 
 		<div class="form-control">
-			<label>Languages and Frameworks known
-				<small>(Check all that apply)</small>
+			<label>Kurās dienās ēdīsi?
 			</label>
 			<!-- Input Type Checkbox -->
+            <!-- Izdarīt pēc tam, kad ir admin view -->
 			<label for="inp-1">
 				<input type="checkbox"
-					name="inp">C</input></label>
+					name="inp">Pirmdiena</input></label>
 			<label for="inp-2">
 				<input type="checkbox"
-					name="inp">C++</input></label>
+					name="inp">Otrdiena</input></label>
 			<label for="inp-3">
 				<input type="checkbox"
-					name="inp">C#</input></label>
+					name="inp">Trešdiena</input></label>
 			<label for="inp-4">
 				<input type="checkbox"
-					name="inp">Java</input></label>
+					name="inp">Ceturtdiena</input></label>
 			<label for="inp-5">
 				<input type="checkbox"
-					name="inp">Python</input></label>
-			<label for="inp-6">
-				<input type="checkbox"
-					name="inp">JavaScript</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">React</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Angular</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Django</input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Spring</input></label>
+					name="inp">Piektdiena</input></label>
 		</div>
-
-		<div class="form-control">
-			<label for="comment">
-				Any comments or suggestions
-			</label>
-
-			<!-- multi-line text input control -->
-			<textarea name="comment" id="comment"
-				placeholder="Enter your comment here">
-			</textarea>
-		</div>
-
 		<!-- Multi-line Text Input Control -->
 		<button type="submit" value="submit">
-			Submit
+			Iesniegt
 		</button>
 	</form>
 </body>
