@@ -7,3 +7,6 @@ otrdiena t/f
 tresdiena t/f
 ceturtdiena t/f
 piektdiena t/f
+
+
+galvenā lapa ---> datubāze ---> profili ---> admina lapa
