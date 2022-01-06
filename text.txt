@@ -10,3 +10,33 @@ piektdiena t/f
 
 
 galvenā lapa ---> datubāze ---> profili ---> admina lapa
+
+<div class="form-control">
+			<label for="role" id="label-role">
+				Klase
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+                <option value="izvelies">izvēlies klasi</option>
+				<option value="7a">7a</option>
+				<option value="7b">7b</option>
+				<option value="8a">
+					8a
+				</option>
+				<option value="8b">8b</option>
+                <option value="9a">9a</option>
+                <option value="9b">9b</option>
+                <option value="10vid">10.VID</option>
+                <option value="10sp">10.SP</option>
+                <option value="10vv">10.VV</option>
+                <option value="11id">11.ID</option>
+                <option value="11sp">11.SP</option>
+                <option value="11vv">11.VV</option>
+                <option value="12dz">12.DZ</option>
+                <option value="12ip">12.IP</option>
+                <option value="12ek">12.EK</option>
+			</select>
+		</div>
+
+		

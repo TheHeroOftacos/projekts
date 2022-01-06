@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content=
 		"width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
 	<title>
 		Ņjam
 	</title>
@@ -74,6 +75,104 @@
 			margin-top: 50px;
 			margin-bottom: 20px;
 		}
+
+		/* DEFAULTS */
+/* =============================================== */
+body {
+    display: grid;
+    place-content: center;
+  
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+  
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+  }
+  
+  
+  /* MAIN */
+  /* =============================================== */
+  .rad-label {
+    display: flex;
+    align-items: center;
+  
+    border-radius: 100px;
+    padding: 14px 16px;
+    margin: 10px 0;
+  
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .rad-label:hover,
+  .rad-label:focus-within {
+    background: hsla(0, 0%, 80%, .14);
+  }
+  
+  .rad-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .rad-design {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+  
+    background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+    position: relative;
+  }
+  
+  .rad-design::before {
+    content: '';
+  
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+  
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
+  }
+  
+  .rad-input:checked+.rad-design::before {
+    transform: scale(0);
+  }
+  
+  .rad-text {
+    color: hsl(0, 0%, 60%);
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+  
+    transition: .3s;
+  }
+  
+  .rad-input:checked~.rad-text {
+    color: hsl(0, 0%, 40%);
+  }
+  
+  
+  /* ABS */
+  /* ====================================================== */
+  .abs-site-link {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    color: hsla(0, 0%, 0%, .5);
+    font-size: 16px;
+  }
+
+
 	</style>
 </head>
 
@@ -95,75 +194,54 @@
 				placeholder="Ievadi vārdu uzvārdu" />
 		</div>
 
-		<div class="form-control">
-			<label for="role" id="label-role">
-				Klase
-			</label>
-			
-			<!-- Dropdown options -->
-			<select name="role" id="role">
-                <option value="izvelies">izvēlies klasi</option>
-				<option value="7a">7a</option>
-				<option value="7b">7b</option>
-				<option value="8a">
-					8a
-				</option>
-				<option value="8b">8b</option>
-                <option value="9a">9a</option>
-                <option value="9b">9b</option>
-                <option value="10vid">10.VID</option>
-                <option value="10sp">10.SP</option>
-                <option value="10vv">10.VV</option>
-                <option value="11id">11.ID</option>
-                <option value="11sp">11.SP</option>
-                <option value="11vv">11.VV</option>
-                <option value="12dz">12.DZ</option>
-                <option value="12ip">12.IP</option>
-                <option value="12ek">12.EK</option>
-			</select>
-		</div>
-
-		<div class="form-control">
-			<label>
-				Vai tu ēdīsi pusdienas šajā slav
-			</label>
-
-			<!-- Input Type Radio Button -->
-			<label for="recommed-1">
-				<input type="radio"
-					id="recommed-1"
-					name="recommed">Jā</input>
-			</label>
-			<label for="recommed-2">
-				<input type="radio"
-					id="recommed-2"
-					name="recommed">Nē</input>
-			</label>
-		</div>
-
+		<select class="dropdown" placeholder="Please choose">
+			<option>List entry #1</option>
+			<option>List entry #2</option>
+			<option>List entry #3</option>
+			<option>List entry #4</option>
+		</select>
+					
+		<!-- dribbble -->
+		<a class="dribbble" href="https://dribbble.com/shots/5430765-Select-dropdown" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 		<div class="form-control">
 			<label>Kurās dienās ēdīsi?
 			</label>
-			<!-- Input Type Checkbox -->
-            <!-- Izdarīt pēc tam, kad ir admin view -->
-			<label for="inp-1">
-				<input type="checkbox"
-					name="inp">Pirmdiena</input></label>
-			<label for="inp-2">
-				<input type="checkbox"
-					name="inp">Otrdiena</input></label>
-			<label for="inp-3">
-				<input type="checkbox"
-					name="inp">Trešdiena</input></label>
-			<label for="inp-4">
-				<input type="checkbox"
-					name="inp">Ceturtdiena</input></label>
-			<label for="inp-5">
-				<input type="checkbox"
-					name="inp">Piektdiena</input></label>
+			<div>
+
+				<label class="rad-label">
+				  <input type="radio" class="rad-input" name="rad">
+				  <div class="rad-design"></div>
+				  <div class="rad-text">Pirmdien</div>
+				</label>
+			  
+				<label class="rad-label">
+				  <input type="radio" class="rad-input" name="rad">
+				  <div class="rad-design"></div>
+				  <div class="rad-text">COtrdien</div>
+				</label>
+			  
+				<label class="rad-label">
+				  <input type="radio" class="rad-input" name="rad">
+				  <div class="rad-design"></div>
+				  <div class="rad-text">Trešdien</div>
+				</label>
+			  
+				<label class="rad-label">
+				  <input type="radio" class="rad-input" name="rad">
+				  <div class="rad-design"></div>
+				  <div class="rad-text">Ceturtdien</div>
+				</label>
+			  
+				<label class="rad-label">
+					<input type="radio" class="rad-input" name="rad">
+					<div class="rad-design"></div>
+					<div class="rad-text">Piektdien</div>
+				  </label>
+
+			  </div>
 		</div>
 		<!-- Multi-line Text Input Control -->
-		<button type="submit" value="submit">
+		<button type="submit" value="submit" href="end.html">
 			Iesniegt
 		</button>
 	</form>
