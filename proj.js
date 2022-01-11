@@ -1,3 +1,5 @@
+
+
 $('select.dropdown').each(function() {
 
     var dropdown = $('<div />').addClass('dropdown selectDropdown');
@@ -57,3 +59,4 @@ $(document).on('click touch', function(e) {
 $('.switch input').on('change', function(e) {
     $('.dropdown, body').toggleClass('light', $(this).is(':checked'));
 });
+

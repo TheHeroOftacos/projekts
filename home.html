@@ -177,24 +177,56 @@ body {
 </head>
 
 <body>
-	
+	 <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div> 
 
 	<!-- Create Form -->
 	<form id="form">
 
 		<!-- Details -->
 		<div class="form-control">
-			<label for="name" id="label-name">
+			<label for="vards" id="vards">
 				Vārds uzvārds
 			</label>
 
 			<!-- Input Type Text -->
 			<input type="text"
-				id="name"
+				id="vards"
 				placeholder="Ievadi vārdu uzvārdu" />
 		</div>
 
-		<select class="dropdown" placeholder="Please choose">
+		<select class="dropdown" placeholder="klase" id="klase">
 			<option>7.a</option>
 			<option>7.b</option>
 			<option>8.a</option>
@@ -221,32 +253,32 @@ body {
 
 				<label class="rad-label">
 				  <input type="checkbox" class="rad-input" name="rad">
-				  <div class="rad-design"></div>
+				  <div class="rad-design" id="1"></div>
 				  <div class="rad-text">Pirmdien</div>
 				</label>
 			  
 				<label class="rad-label">
 				  <input type="checkbox" class="rad-input" name="rad">
-				  <div class="rad-design"></div>
+				  <div class="rad-design" id="2"></div>
 				  <div class="rad-text">Otrdien</div>
 				</label>
 			  
 				<label class="rad-label">
 				  <input type="checkbox" class="rad-input" name="rad">
-				  <div class="rad-design"></div>
+				  <div class="rad-design" id="3"></div>
 				  <div class="rad-text">Trešdien</div>
 				</label>
 			  
 				<label class="rad-label">
 				  <input type="checkbox" class="rad-input" name="rad">
-				  <div class="rad-design"></div>
+				  <div class="rad-design" id="4"></div>
 				  <div class="rad-text">Ceturtdien</div>
 				</label>
 			  
 				<label class="rad-label">
 					<input type="checkbox" class="rad-input" name="rad">
-					<div class="rad-design"></div>
-					<div class="rad-text">Pektdien</div>
+					<div class="rad-design" id="5"></div>
+					<div class="rad-text">Piektdien</div>
 				  </label>
 
 			  </div>
@@ -257,5 +289,16 @@ body {
 		</button>
 	</form>
 </body>
+Example
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script> 
 </html>
