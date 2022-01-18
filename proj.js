@@ -1,5 +1,4 @@
 
-
 $('select.dropdown').each(function() {
 
     var dropdown = $('<div />').addClass('dropdown selectDropdown');
