@@ -1,3 +1,4 @@
+from venv import create
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -5,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__, template_folder="template")
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
+
 
 @app.route('/')
 def index():
@@ -14,9 +16,10 @@ class User(db.Model):
    username = db.Column(db.String(80), unique=True, nullable=False)
    password = db.Column(db.String(120), unique=True, nullable=False)
 
-@app.route('/admin0987654321')
+@app.route('/admin')
 def admin():
     return render_template("end.html")
+
 
 if __name__ == "__main__":
    app.run(debug=True)
