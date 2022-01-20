@@ -43,3 +43,21 @@ def new():
 if __name__ == '__main__':
    db.create_all()
    app.run(debug = True)
+
+   <select class="dropdown" placeholder="klase" id="klase">
+			<option>7.a</option>
+			<option>7.b</option>
+			<option>8.a</option>
+			<option>8.b</option>
+			<option>9.a</option>
+			<option>9.b</option>
+			<option>10.VID</option>
+			<option>10.SP</option>
+			<option>10.VV</option>
+			<option>11.ID</option>
+			<option>11.SP</option>
+			<option>11.VV</option>
+			<option>12.EK</option>
+			<option>12.IP</option>
+			<option>12.DZ</option>
+		</select>
