@@ -41,3 +41,4 @@ if __name__ == "__main__":
 
    # Run flask session
    app.run(debug=True, port=5000)
+#username - admin password - skola
