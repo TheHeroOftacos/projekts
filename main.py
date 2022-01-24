@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, redirect, url_for, request
+
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -19,7 +20,21 @@ class User(db.Model):
    username = db.Column(db.String(80), unique=True, nullable=False)
    password = db.Column(db.String(120), unique=True, nullable=False)
 
+# Route for handling the login page logic
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('home'))
+    return render_template('main.html', error=error)
+#problēma - 
+#Not Found 
+#The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 @app.route('/')
+@app.route('/home')
 def index():
    return render_template("home.html")
 
