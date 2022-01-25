@@ -28,7 +28,7 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return redirect(url_for('home'))
+            return redirect(url_for('/admin'))
     return render_template('main.html', error=error)
 #problēma - 
 #Not Found 
