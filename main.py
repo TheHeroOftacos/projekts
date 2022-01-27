@@ -29,7 +29,7 @@ def login():
             error = 'Invalid Credentials. Please try again.'
         else:
             return redirect(url_for('/admin'))
-    return render_template('main.html', error=error)
+    return render_template('end.html', error=error)
 #problēma - 
 #Not Found 
 #The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
