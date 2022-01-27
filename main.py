@@ -20,6 +20,15 @@ class User(db.Model):
    username = db.Column(db.String(80), unique=True, nullable=False)
    password = db.Column(db.String(120), unique=True, nullable=False)
 
+@app.route('/admin')
+def admin():
+    return render_template("end.html")
+
+@app.route('/')
+@app.route('/home')
+def index():
+   return render_template("home.html")
+
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -29,20 +38,12 @@ def login():
             error = 'Invalid Credentials. Please try again.'
         else:
             return redirect(url_for('/admin'))
-    return render_template('end.html', error=error)
+    return render_template('end-.html', error=error)
+    #https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#installation
 #problēma - 
 #Not Found 
 #The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 #vajag salabot login pogu lai viņš sūta uz end.html
-@app.route('/')
-@app.route('/home')
-def index():
-   return render_template("home.html")
-
-@app.route('/admin')
-def admin():
-    return render_template("end.html")
-
 
 if __name__ == "__main__":
    

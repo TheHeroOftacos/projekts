@@ -309,6 +309,7 @@ a.button:active {
     z-index: 1;
 }
 
+
 	</style>
 </head>
 
@@ -339,6 +340,7 @@ class="close" title="Close Modal">&times;</span>
       {% endif %}
       
     </div>
+    <!--https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_examples_modal_login-->
     
   </form>
 </div> 
@@ -349,33 +351,35 @@ class="close" title="Close Modal">&times;</span>
 	<form id="form">
 
 		<!-- Details -->
-		<div class="form-control">
-			<label for="vards" id="vards">
-				Vārds uzvārds
-			</label>
+		<div class="form__group field">
+      <input type="input" class="form__field" placeholder="Name" name="name" id='vards' required />
+      <label for="name" class="form__label">Vārds, uzvārds</label>
+    </div>
 
-			<!-- Input Type Text -->
-			<input type="text"
-				id="vards"
-				placeholder="Ievadi vārdu uzvārdu" />
-		</div>
+		
 
 		<input class="dark-light" type="checkbox" id="dark-light" name="dark-light"/>
   	<label for="dark-light"></label>
 
-	  <details class="dropdown">
-		<summary role="button">
-		  <a class="button">Click on me!</a>
-		</summary>
-		<ul>
-		  <li><a href="#">I'm a dropdown.</a></li>
-		  <li><a href="#">In Pure CSS</a></li>
-		  <li><a href="#">As in...</a></li>
-		  <li><a href="#">No JavaScript.</a></li>
-		  <li><a href="#">At All.</a></li>
-	  </ul>
-	</details>
-					
+    <select class="dropdown" placeholder="klase" id="klase">
+			<option id="7a">7.a</option>
+			<option id="7b">7.b</option>
+			<option id="8a">8.a</option>
+			<option id="8b">8.b</option>
+			<option id="9a">9.a</option>
+			<option id="9b">9.b</option>
+			<option id="10vid">10.VID</option>
+			<option id="10sp">10.SP</option>
+			<option id="10vv">10.VV</option>
+			<option id="11id">11.ID</option>
+			<option id="11sp">11.SP</option>
+			<option id="11vv">11.VV</option>
+			<option id="12ek">12.EK</option>
+			<option id="12ip">12.IP</option>
+			<option id="12dz">12.DZ</option>
+		</select>
+		
+    <!--https://codepen.io/AbubakerSaeed/pen/MWaEqJP-->
 		<!-- dribbble -->
 		<a class="dribbble" href="https://dribbble.com/shots/5430765-Select-dropdown" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 		<div class="form-control">
@@ -421,7 +425,9 @@ class="close" title="Close Modal">&times;</span>
 		</button>
 	</form>
 </body>
+<form action="/action_page.php">
 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+</form>
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
