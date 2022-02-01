@@ -11,53 +11,11 @@ piektdiena t/f
 
 galvenā lapa ---> datubāze ---> profili ---> admina lapa
 
-
-
-class edaji(db.Model):
-   id = db.Column('edaji_id', db.Integer, primary_key = True)
-   vards = db.Column(db.String(50))
-   klase = db.Column(db.String(50))
-
-def __init__(vards, klase):
-   self.vards = vards
-   self.klase = klase
-
-@app.route('/')
-def show_all():
-   return render_template('home.html', edaji = edaji.query.all() )
-
-@app.route('/new', methods = ['GET', 'POST'])
-def new():
-   if request.method == 'POST':
-      if not request.form['vards'] or not request.form['klase']:
-         flash('Kļūme', 'error')
-      else:
-         edaji = edaji(request.form['vards'], request.form['klase'])
-         
-         db.session.add(edaji)
-         db.session.commit()
-         flash('Paldies')
-         return redirect(url_for('home'))
-   return render_template('home.html')
-
-if __name__ == '__main__':
-   db.create_all()
-   app.run(debug = True)
-
-   <select class="dropdown" placeholder="klase" id="klase">
-			<option>7.a</option>
-			<option>7.b</option>
-			<option>8.a</option>
-			<option>8.b</option>
-			<option>9.a</option>
-			<option>9.b</option>
-			<option>10.VID</option>
-			<option>10.SP</option>
-			<option>10.VV</option>
-			<option>11.ID</option>
-			<option>11.SP</option>
-			<option>11.VV</option>
-			<option>12.EK</option>
-			<option>12.IP</option>
-			<option>12.DZ</option>
-		</select>
+TO DO LIST:
+neatļaut ieiet admin page ar /admin
+pievienot datus database
+live edit admin page
+class klase(db.Model):
+   id = db.Column(db.Integer, primary_key=True)
+   diena = db.Column(db.Integer, primary_key=True)
+   name = db.Column(db.Integer, primary_key=True)

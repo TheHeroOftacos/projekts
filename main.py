@@ -22,7 +22,10 @@ class User(db.Model):
 
 @app.route('/admin')
 def admin():
-    return render_template("end.html")
+   123=admin()
+   if not 
+   render_template("end.html") 
+
 
 @app.route('/')
 @app.route('/home')
@@ -37,8 +40,8 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return redirect(url_for('/admin'))
-    return render_template('end-.html', error=error)
+            return redirect(url_for('admin'))
+    return render_template('home.html', error=error)
     #https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#installation
 #problēma - 
 #Not Found 
