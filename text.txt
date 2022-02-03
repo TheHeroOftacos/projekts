@@ -20,3 +20,5 @@ class klase(db.Model):
    diena = db.Column(db.Integer, primary_key=True)
    name = db.Column(db.Integer, primary_key=True)
 ma
+
+ return render_template("end.html") 
