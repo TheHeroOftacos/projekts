@@ -22,9 +22,11 @@ class User(db.Model):
 
 @app.route('/admin')
 def admin():
-   123=admin()
-   if not 
-   render_template("end.html") 
+   balls=admin()
+   if not balls:
+      return('your not that guy')
+   else:
+      return render_template("end.html") 
 
 
 @app.route('/')

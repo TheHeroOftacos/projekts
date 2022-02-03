@@ -19,3 +19,4 @@ class klase(db.Model):
    id = db.Column(db.Integer, primary_key=True)
    diena = db.Column(db.Integer, primary_key=True)
    name = db.Column(db.Integer, primary_key=True)
+ma
