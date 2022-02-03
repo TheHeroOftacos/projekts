@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 
 
+
 # Create new flask session
 app = Flask(__name__, template_folder='template')
 
@@ -22,11 +23,7 @@ class User(db.Model):
 
 @app.route('/admin')
 def admin():
-   balls=admin()
-   if not balls:
-      return('your not that guy')
-   else:
-      return render_template("end.html") 
+    return render_template("end.html") 
 
 
 @app.route('/')
@@ -40,7 +37,7 @@ def login():
     error = None
     if request.method == 'POST':
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid Credentials. Please try again.'
+            error = 'Nebūs'
         else:
             return redirect(url_for('admin'))
     return render_template('home.html', error=error)
