@@ -56,7 +56,7 @@ class User(db.Model):
 # each table in the database needs a class to be created for it
 # db.Model is required - don't change it
 # identify all columns by name and data type
-class Sock(db.Model):
+class est(db.Model):
     __tablename__ = 'socks'
     id = db.Column(db.Integer, primary_key=True)
     vards = db.Column(db.String)
@@ -97,6 +97,21 @@ def login():
 #The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 #vajag salabot login pogu lai viņš sūta uz end.html
 
+@app.route("/paldies", methods=['POST', 'GET'])
+def create_article():
+    if request.method == 'POST':
+        vards = request.form['vards']
+
+        ediens = est(vards = vards)
+
+        try:
+            db.session.add(ediens)
+            db.session.commit()
+            return redirect('/admin')
+        except:
+            return "notika klume"
+    else:
+        return render_template("home.html")
 if __name__ == "__main__":
    
    # Deal with database
