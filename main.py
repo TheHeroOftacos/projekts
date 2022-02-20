@@ -53,15 +53,15 @@ class est(db.Model):
     __tablename__ = 'socks'
     id = db.Column(db.Integer, primary_key=True)
     vards = db.Column(db.String)
-    # klase = db.Column(db.String)
-    # diena = db.Column(db.String)
-    # updated = db.Column(db.String)
+    klase = db.Column(db.String)
+    diena = db.Column(db.String)
+    updated = db.Column(db.String)
 
-    def __init__(self, vards):
+    def __init__(self, vards, klase, diena, updated):
         self.vards = vards
-        # self.klase = klase
-        # self.diena = diena
-        # self.updated = updated
+        self.klase = klase
+        self.diena = diena
+        self.updated = updated
 
 
 @app.route('/admin')
